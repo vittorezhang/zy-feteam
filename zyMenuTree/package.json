@@ -9,7 +9,7 @@
 		},
 		"repository": {
 				"type": "git",
-				"url": "git+https://github.com/Vittore0115/zy-feteam.git"
+				"url": "git+https://github.com/vittorezhang/zy-feteam.git"
 		},
 		"keywords": [
 				"vue",
@@ -18,9 +18,9 @@
 		"author": "zwt",
 		"license": "ISC",
 		"bugs": {
-				"url": "https://github.com/Vittore0115/zy-feteam/issues"
+				"url": "https://github.com/vittorezhang/zy-feteam/issues"
 		},
-		"homepage": "https://github.com/Vittore0115/zy-feteam#readme",
+		"homepage": "https://github.com/vittorezhang/zy-feteam#readme",
 		"devDependencies": {
 				"babel-core": "^6.26.0",
 				"babel-loader": "^7.1.2",
