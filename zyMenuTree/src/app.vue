@@ -4,6 +4,7 @@
     class="treeWrap"
   >
     <el-input
+      :prefix-icon="icon"
       :placeholder="placeHolder"
       v-model.lazy="filterText"
       clearable
@@ -35,6 +36,10 @@ export default {
     placeHolder: {
       type: String,
       default: '请输入菜单名',
+    },
+    icon: {
+      type: String,
+      default: 'el-icon-search'
     },
     menuList: {
       type: Array,
