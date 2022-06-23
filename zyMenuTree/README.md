@@ -87,6 +87,7 @@ export default {
 
 |    props    |  type  |      default       |          description             |
 | :---------: | :----: | :----------------: | :------------------------------: |
+|  icon|   String | ""  | `el-icon-search` Input prompt|
 |  placeHolder|   String | ""  | `placeHolder` Input prompt|
 |  menuList   |   Array  | []  | `menuList` source prompt |
 | _renderHandle|  Function | () => {} | `_renderHandle` event render |
