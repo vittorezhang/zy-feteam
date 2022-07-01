@@ -86,12 +86,12 @@ export default {
     renderContent(h, { node, data, store }) {
       let icon = data.icon
       let title = data.title
-      if (title == '首页') {
-        this.innerHeight = true
-      } else {
-        this.innerHeight = false
-      }
-      return this._renderHandle({ icon, title, innerHeight: this.innerHeight })
+      // if (title == '首页') {
+      //   this.innerHeight = true
+      // } else {
+      //   this.innerHeight = false
+      // }
+      return this._renderHandle({ icon, title })
     },
     filterNode(value, { title, pid } = data, node) {
       if (!Boolean(title)) return true
@@ -120,7 +120,7 @@ export default {
       loop(array)
     },
     rowNodeClick(data) {
-      Object.assign(data, { innerHeight: false })
+      // Object.assign(data, { innerHeight: false })
       this.$emit('route', data)
     },
     close() {
@@ -133,9 +133,9 @@ export default {
 <style scoped lang='less'>
 /deep/ .filter-tree {
   .el-tree-node__content {
+    color: black;
     height: 60px;
     font-size: 14px;
-    color: #8a979e;
     position: relative;
   }
   .el-tree-node:focus > .el-tree-node__content {
@@ -156,6 +156,9 @@ export default {
 }
 /deep/ .darkSkin {
   background: #001529;
+  .el-tree-node__content {
+    color: #8a979e;
+  }
   .el-tree-node:focus > .el-tree-node__content {
     background: #031f39;
   }
@@ -163,15 +166,18 @@ export default {
     background: #031f39;
   }
 }
-/deep/ .defaultSkin {
-  background: #fff;
-  .el-tree-node:focus > .el-tree-node__content {
-    background: #fff;
-  }
-  .el-tree-node__content:hover {
-    background: #fff;
-  }
-}
+// /deep/ .defaultSkin {
+//   background: #fff;
+//   .el-tree-node__content {
+//     color: black;
+//   }
+//   .el-tree-node:focus > .el-tree-node__content {
+//     background: #fff;
+//   }
+//   .el-tree-node__content:hover {
+//     background: #fff;
+//   }
+// }
 
 .el-tree-node__children {
   overflow-x: scroll;
