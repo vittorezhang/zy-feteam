@@ -11,6 +11,7 @@ const passport = require('koa-passport');
 const moment = require('moment');
 const router = new Router();
 const app = new Koa();
+const { getLocalIP } = require('./getIp.ts')
 
 // middleware
 // cors
@@ -92,16 +93,21 @@ io.on('connection', (socket: any) => {
                 messageId: v4(),
             });
             io.emit('msg', message);
-            callback(true);
+            callback({
+                status: '200'
+            });
         } catch (e) {
-            callback(false);
+            callback({
+                status: '500'
+            });;
         }
     });
 });
 
 server.listen(3000, () => {
-    console.log('当前服务是http://localhost:3000');
-    console.log('Press CTRL-C to stop \n');
+    console.log('App running at: \n');
+    console.log(`- Local: http://localhost:3000 (copied to clipboard)`);
+    console.log(`- Network: http://${getLocalIP()}:3000 \n\n`);
 });
 
 export { app };
