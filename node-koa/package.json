@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc app.ts",
-    "start": "tsc app.ts && nodemon app.js",
-    "pc": "tsc src/index.ts && node src/index.js"
+    "start": "tsc app.ts && node app.js"
   },
   "author": "",
   "license": "ISC",
