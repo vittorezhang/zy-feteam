@@ -12,6 +12,7 @@ const moment = require('moment');
 const router = new Router();
 const app = new Koa();
 const { getLocalIP } = require('./getIp.ts')
+const chalk = require('chalk')
 
 // middleware
 // cors
@@ -106,8 +107,8 @@ io.on('connection', (socket: any) => {
 
 server.listen(3000, () => {
     console.log('App running at: \n');
-    console.log(`- Local: http://localhost:3000 (copied to clipboard)`);
-    console.log(`- Network: http://${getLocalIP()}:3000 \n\n`);
+    console.log(`- Local: ${chalk.rgb(0, 38, 255).bold('http://localhost:3000')} (copied to clipboard)`);
+    console.log(`- Network: ${chalk.rgb(0, 38, 255).bold(`http://${getLocalIP()}:3000 `)}\n\n`);
 });
 
 export { app };
