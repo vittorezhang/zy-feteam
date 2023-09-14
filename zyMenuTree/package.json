@@ -1,6 +1,6 @@
 {
 		"name": "zy-sidebar",
-		"version": "1.0.6",
+		"version": "1.0.7",
 		"description": "后台管理系统侧边动态菜单栏封装,支持查询、菜单展开",
 		"main": "dist/zyMenuTree.min.js",
 		"scripts": {

@@ -8,7 +8,8 @@
       :placeholder="placeHolder"
       v-model.lazy="filterText"
       clearable
-      style="margin-bottom: 10px; width: 94%"
+      class="inputBox"
+      v-show="!collapse"
     ></el-input>
     <el-tree
       class="filter-tree"
@@ -37,6 +38,10 @@
 import { cloneDeep, throttle } from 'lodash'
 export default {
   props: {
+    collapse: {
+      type: Boolean,
+      default: false,
+    },
     sidebarLayoutSkin: {
       type: String,
       default: 'default',
@@ -185,6 +190,10 @@ export default {
 }
 .treeWrap {
   position: absolute;
+  .inputBox{
+    width: 94%;
+    margin-bottom: 10px; 
+  }
   .backDrop {
     width: 100%;
     height: 100%;
