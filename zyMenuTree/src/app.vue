@@ -2,6 +2,7 @@
   <div
     :style="'margin-right:20px;' + backDropShow ? '' : 'z-index:-1'"
     class="treeWrap"
+    @mouseenter="mouseenter"
   >
     <el-input
       :prefix-icon="icon"
@@ -131,6 +132,9 @@ export default {
     close() {
       this.backDropShow = !this.backDropShow
     },
+    mouseenter(){
+        this.$emit('mouseenter')
+    }
   },
 }
 </script>
